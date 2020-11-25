@@ -31,6 +31,7 @@ class HomeController extends Controller
 //        Test::create([
 //            'name' => 'Uraaa'
 //        ]);
+        
         $tests = Test::all();
         dd($tests);
         return view('home');
