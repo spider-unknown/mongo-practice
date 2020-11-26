@@ -1,8 +1,8 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Volunteer</title>
+<title>MongoDb</title>
 <meta name="csrf-token" id="csrf-token" content="{{csrf_token()}}">
-<meta name="description" content="volunteer.kz">
+<meta name="description" content="mongodb.kz">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="shortcut icon" href="{{asset('favicon.png')}}" type="image/x-icon">
 <link rel="stylesheet" href="{{asset('admin/styles/fontawesome.css')}}">

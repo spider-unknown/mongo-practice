@@ -85,7 +85,10 @@
                 </div>
                 <div class="card-footer">
                     {{ $mts->links() }}
-
+                    <div class="panel-footer">
+                        <p style="text-align: center"> показано {{ $mts->firstItem() }} до {{ $mts->lastItem() }}
+                            из {{$mts->total()}} данных </p>
+                    </div>
                 </div>
             </div>
         </div>
