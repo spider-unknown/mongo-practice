@@ -22,6 +22,13 @@
                     <span>Главное</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{\App\Helpers\Helper::urlActiveHelperStartsWith('medical-equipment')}}"
+                   href="{{route('medical_equipment.index')}}">
+                    <i class="material-icons">dashboard</i>
+                    <span>Медицинская техника</span>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>
