@@ -12,8 +12,8 @@
                 <div class="card-body p-0 d-flex">
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
-                            <span class="stats-small__label text-uppercase">Таблицы</span>
-                            <h6 class="stats-small__value count my-3">5</h6>
+                            <span class="stats-small__label text-uppercase">Количество всех МТ</span>
+                            <h6 class="stats-small__value count my-3">{{$mt_count}}</h6>
                         </div>
                     </div>
                     <canvas height="120" class="blog-overview-stats-small-1"></canvas>

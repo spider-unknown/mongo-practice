@@ -22,6 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.content.welcome');
+        $mt_count= MedicalEquipment::count('countmt');
+        return view('admin.content.welcome',compact('mt_count'));
     }
 }

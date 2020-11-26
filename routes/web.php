@@ -25,7 +25,7 @@ Route::get('/medical_equipment/edit/{id}', 'MedicalEquipmentController@edit')->n
 Route::post('/medical_equipment/store', 'MedicalEquipmentController@store')->name('medical_equipment.store');
 Route::post('/medical_equipment/update/{id}', 'MedicalEquipmentController@update')->name('medical_equipment.update');
 Route::post('/medical_equipment/delete/{id}', 'MedicalEquipmentController@Delete')->name('medical_equipment.delete');
-Route::get('/medical_equipment/search', 'MedicalEquipmentController@search')->name('medical_equipment.search');
+Route::post('/medical_equipment/search', 'MedicalEquipmentController@search')->name('medical_equipment.search');
 
 
 //Part

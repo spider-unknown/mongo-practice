@@ -12,23 +12,27 @@
                 <div class="card-header border-bottom">
                     <h6 class="m-0">Фильтры</h6>
                 </div>
-                <div class="card-body">
-                    <div class="row ml-1 mt-2">
+                <form method="post" action="{{route('medical_equipment.search')}}">
+                    @csrf
+                    <div class="card-body">
+                        <div class="row ml-1 mt-2">
 
-                        <div class="col-3">
-                            <label for="name" class="form-control-plaintext">Имя</label>
-                            <input class="form-control" type="text" name="namemt" placeholder="Леонардо" id="firstName">
+                            <div class="form-group col-3">
+                                <label for="name" class="form-control-plaintext">Имя</label>
+                                <input class="form-control" type="text" name="namemt"
+                                       value="{{$namemt ? $namemt : old('namemt')}}"
+
+                                       placeholder="Леонардо" id="firstName">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer">
-                    <button class="mb-2 btn btn-medium btn-primary mr-1" onclick="search()">Поиск
-                        <i class="material-icons md-12">search</i>
-                    </button>
-                    <a href="{{route('medical_equipment.create')}}" type="button" class="mb-2 btn btn-medium btn-primary mr-1">Добавить
-                        <i class="material-icons md-12">add_circle</i>
-                    </a>
-                </div>
+                    <div class="card-footer">
+
+                        <button class="mb-2 btn btn-medium btn-primary mr-1" type="submit" >Поиск
+
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col">
