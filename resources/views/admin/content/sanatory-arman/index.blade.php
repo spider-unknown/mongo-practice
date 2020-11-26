@@ -12,23 +12,26 @@
                 <div class="card-header border-bottom">
                     <h6 class="m-0">Фильтры</h6>
                 </div>
-                <div class="card-body">
-                    <div class="row ml-1 mt-2">
-
-                        <div class="col-3">
-                            <label for="name" class="form-control-plaintext">Имя</label>
-                            <input class="form-control" type="text" name="namemt" placeholder="Леонардо" id="firstName">
+                <form action="{{route('sanatory.arman.index')}}">
+                    <div class="card-body">
+                        <div class="row ml-1 mt-2">
+                            <div class="col-3">
+                                <label for="name" class="form-control-plaintext">Имя</label>
+                                <input class="form-control" type="text" name="text" value="{{$text}}" placeholder="Леонардо"
+                                       id="firstName">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer">
-                    <button class="mb-2 btn btn-medium btn-primary mr-1" onclick="search()">Поиск
-                        <i class="material-icons md-12">search</i>
-                    </button>
-                    <a href="{{route('medical_equipment.create')}}" type="button" class="mb-2 btn btn-medium btn-primary mr-1">Добавить
-                        <i class="material-icons md-12">add_circle</i>
-                    </a>
-                </div>
+                    <div class="card-footer">
+                        <button class="mb-2 btn btn-medium btn-primary mr-1" type="submit">Поиск
+                            <i class="material-icons md-12">search</i>
+                        </button>
+                        <a href="{{route('sanatory.arman.create')}}" type="button"
+                           class="mb-2 btn btn-medium btn-primary mr-1">Добавить
+                            <i class="material-icons md-12">add_circle</i>
+                        </a>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col">
@@ -58,13 +61,14 @@
                                 <td>{{$type->namekz}}</td>
                                 <td>
                                     <a class="btn btn-outline-primary mb-2 "
-                                       href="{{route('medical_equipment.edit', ['id' => $type->id])}}">
+                                       href="{{route('sanatory.arman.edit', ['id' => $type->_id])}}">
                                         <i class="material-icons md-12">edit</i>
                                     </a>
-                                    <form class="d-inline" method="post" action="{{route('medical_equipment.delete', ['id' => $type->id])}}">
+                                    <form class="d-inline" method="post"
+                                          action="{{route('sanatory.arman.delete', ['id' => $type->_id])}}">
                                         {{csrf_field()}}
                                         {{method_field('POST')}}
-                                        <button  class="btn btn-outline-danger mr-20 mb-2 " type="submit">
+                                        <button class="btn btn-outline-danger mr-20 mb-2 " type="submit">
                                             <i class="material-icons md-50">delete</i>
                                         </button>
                                     </form>
@@ -80,7 +84,8 @@
                     {{ $types->links() }}
                     @if($types->items())
                         <div class="panel-footer">
-                            <p style="text-align: center"> показано {{ $types->firstItem() }} до {{ $types->lastItem() }}
+                            <p style="text-align: center"> показано {{ $types->firstItem() }}
+                                до {{ $types->lastItem() }}
                                 из {{$types->total()}} данных </p>
                             {{ $types->links() }}
                         </div>
