@@ -30,8 +30,8 @@ class MedicalEquipmentController extends Controller
     public function index()
     {
         $mts = MedicalEquipment::orderBy('created_at', 'desc')->paginate(10);
-
-        return view('admin.content.medical_equipment.index',compact('mts'));
+        $namemt = null;
+        return view('admin.content.medical_equipment.index',compact('mts','namemt'));
     }
 
     public function create(){
@@ -86,16 +86,16 @@ class MedicalEquipmentController extends Controller
     public function search(Request $request)
     {
         $name_ru = "передвижной";
-        $data = MedicalEquipment::where('namemt', 'LIKE', '%' . $request->namemt . '%')
-            ->paginate($request->perPage);
+        $namemt = null;
+        if($request->namemt == null){
+            $mts = MedicalEquipment::orderBy('created_at', 'desc')->paginate(10);
 
+        }else {
+            $namemt = $request->namemt;
+            $mts = MedicalEquipment::where('namemt', 'LIKE', '%' . $request->namemt . '%')
+                ->paginate($request->perPage);
+        }
+        return view('admin.content.medical_equipment.index',compact('mts','namemt'));
 
-        return response()->json(
-            [
-                'mts'         => $data,
-                'search_count' => $data->count(),
-                'total'        => MedicalEquipment::query()->count(),
-            ]
-        );
     }
 }
