@@ -39,7 +39,7 @@
     @endif
 
     @if(Session::has('warning'))
-    toastr.info("{!! Session::get('warning') !!}");
+    toastr.warning("{!! Session::get('warning') !!}");
     @endif
 
 </script>

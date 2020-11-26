@@ -10,7 +10,7 @@ class WebBaseController extends Controller
     {
         request()
             ->session()
-            ->flash('warning', 'Ошибка!');
+            ->flash('error', 'Ошибка!');
 
     }
 
@@ -18,7 +18,7 @@ class WebBaseController extends Controller
     {
         request()
             ->session()
-            ->flash('warning', 'Добавлено!');
+            ->flash('success', 'Добавлено!');
     }
 
     public function inModeration()
@@ -32,7 +32,7 @@ class WebBaseController extends Controller
     {
         request()
             ->session()
-            ->flash('warning', 'Удалено!');
+            ->flash('error', 'Удалено!');
     }
 
     public function successOperation()
@@ -46,14 +46,14 @@ class WebBaseController extends Controller
     {
         request()
             ->session()
-            ->flash('warning', 'Обновлено!');
+            ->flash('info', 'Обновлено!');
     }
 
     public function notFound()
     {
         request()
             ->session()
-            ->flash('warning', 'Не найдено!');
+            ->flash('error', 'Не найдено!');
     }
 
 
