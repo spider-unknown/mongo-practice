@@ -36,11 +36,6 @@
                 <div class="card-header border-bottom">
                     <h6 class="m-0">Медицинская техника</h6>
                 </div>
-                <div class="card-header border-bottom">
-                    <a href="{{route('medical_equipment.create')}}" type="button" class="mb-2 btn btn-medium btn-primary mr-1">Добавить
-                        <i class="material-icons md-12">add_circle</i>
-                    </a>
-                </div>
                 <div class="card-body p-0 pb-3 text-center">
                     <table class="table mb-0" id='table-body'>
                         <thead class="bg-light">

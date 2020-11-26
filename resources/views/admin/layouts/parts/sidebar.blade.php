@@ -23,10 +23,17 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{\App\Helpers\Helper::urlActiveHelperStartsWith('medical-equipment')}}"
+                <a class="nav-link {{\App\Helpers\Helper::urlActiveHelperStartsWith('medical_equipment')}}"
                    href="{{route('medical_equipment.index')}}">
                     <i class="material-icons">dashboard</i>
                     <span>Медицинская техника</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{\App\Helpers\Helper::urlActiveHelperStartsWith('sanatory.arman')}}"
+                   href="{{route('sanatory.arman.index')}}">
+                    <i class="material-icons">dashboard</i>
+                    <span>Санатория Арман</span>
                 </a>
             </li>
         </ul>

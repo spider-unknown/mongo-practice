@@ -9,7 +9,7 @@ class SanatoryArmanController extends WebBaseController
 {
     public function index() {
         $types = SanatoryArman::paginate(10);
-        return view('admin.content.sanatory-arman.index',compact('$types'));
+        return view('admin.content.sanatory-arman.index',compact('types'));
 
     }
 }
