@@ -36,6 +36,13 @@
                     <span>Санатория Арман</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{\App\Helpers\Helper::urlActiveHelperStartsWith('sanatory.kazakhstan')}}"
+                   href="{{route('sanatory.kazakhstan.index')}}">
+                    <i class="material-icons">dashboard</i>
+                    <span>Санатория Казахстан</span>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>
