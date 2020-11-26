@@ -20,10 +20,13 @@ Route::get('/test', 'HomeController@test')->name('test');
 
 
 Route::get('/medical_equipment/index', 'MedicalEquipmentController@index')->name('medical_equipment.index');
-Route::get('/medical_equipment/store', 'MedicalEquipmentController@store')->name('medical_equipment.store');
-Route::get('/medical_equipment/update', 'MedicalEquipmentController@update')->name('medical_equipment.update');
-Route::get('/medical_equipment/delete/{id}', 'MedicalEquipmentController@delete')->name('medical_equipment.delete');
+Route::get('/medical_equipment/create', 'MedicalEquipmentController@create')->name('medical_equipment.create');
+Route::get('/medical_equipment/edit/{id}', 'MedicalEquipmentController@edit')->name('medical_equipment.edit');
+Route::post('/medical_equipment/store', 'MedicalEquipmentController@store')->name('medical_equipment.store');
+Route::post('/medical_equipment/update/{id}', 'MedicalEquipmentController@update')->name('medical_equipment.update');
+Route::post('/medical_equipment/delete/{id}', 'MedicalEquipmentController@Delete')->name('medical_equipment.delete');
 Route::get('/medical_equipment/search', 'MedicalEquipmentController@search')->name('medical_equipment.search');
+
 
 //Part
 Route::get('/illness/index', 'IllnessController@index')->name('illness.index');
