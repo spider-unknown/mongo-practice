@@ -87,7 +87,6 @@
                             <p style="text-align: center"> показано {{ $types->firstItem() }}
                                 до {{ $types->lastItem() }}
                                 из {{$types->total()}} данных </p>
-                            {{ $types->links() }}
                         </div>
                     @endif
                 </div>

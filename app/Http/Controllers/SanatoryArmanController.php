@@ -12,7 +12,8 @@ class SanatoryArmanController extends WebBaseController
         if($text) {
             $types = SanatoryArman::where('namekz', 'LIKE', '%' . $request->text . '%')
                 ->orWhere('namerus', 'LIKE', '%' . $request->namerus . '%')
-                ->paginate(10);
+                ->paginate(10)
+                ->appends(request()->query());
         }
         else {
             $types = SanatoryArman::paginate(10);
