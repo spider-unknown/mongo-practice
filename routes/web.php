@@ -28,4 +28,4 @@ Route::get('/medical_equipment/search', 'MedicalEquipmentController@search')->na
 
 
 
-//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('welcome');
